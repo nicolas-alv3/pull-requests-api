@@ -58,7 +58,7 @@ app.delete('/pull-requests/:id', (req, res) => {
     res.json(deletedPullRequest[0]);
 });
 
-// Eliminar todos los Pull Requests
+// Eliminar todos los Pull Request
 app.delete('/pull-requests', (req, res) => {
     pullRequests.length = 0;
     res.json({ message: 'All Pull Requests have been deleted' });
