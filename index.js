@@ -13,9 +13,9 @@ index.use(bodyParser.json());
 
 // Crear un nuevo Pull Request
 index.post('/pull-requests', (req, res) => {
-    const { author, description, link, project } = req.body;
+    const { author, description, link, project, timestamp } = req.body;
     const creationDate = new Date().toISOString();
-    const newPullRequest = { id: nextId++, author, description, creationDate, link, project };
+    const newPullRequest = { id: nextId++, author, description, creationDate, link, project, timestamp };
     pullRequests.push(newPullRequest);
     res.json(newPullRequest);
 });
